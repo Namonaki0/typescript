@@ -50,3 +50,41 @@ person = {
   location: 'USA',
   age: 40,
 };
+
+
+//? EXPLICIT TYPES
+
+let character: string = 'Stef';
+let age: number;
+let isLoggedIn: boolean;
+
+age = 30;
+
+isLoggedIn = true;
+
+// arrays
+let newNames: string[] = [];
+
+newNames.push('Mike');
+newNames.push('Brenda');
+console.log(newNames);
+
+// union types
+let mixed: (string|number|boolean)[] = [];
+mixed.push('greetings');
+mixed.push(false);
+mixed.push(80);
+console.log(mixed);
+
+let uid: string|number;
+
+// objects
+let nameOne: object;
+nameOne = { name: 'Crow', age: 30 };
+
+let nameTwo: {
+  name: string,
+  age: number,
+  beltColour: string
+};
+nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };

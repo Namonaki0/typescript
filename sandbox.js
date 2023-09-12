@@ -33,3 +33,26 @@ person = {
     location: 'USA',
     age: 40,
 };
+//? EXPLICIT TYPES
+var character = 'Stef';
+var age;
+var isLoggedIn;
+age = 30;
+isLoggedIn = true;
+// arrays
+var newNames = [];
+newNames.push('Mike');
+newNames.push('Brenda');
+console.log(newNames);
+// union types
+var mixed = [];
+mixed.push('greetings');
+mixed.push(false);
+mixed.push(80);
+console.log(mixed);
+var uid;
+// objects
+var nameOne;
+nameOne = { name: 'Crow', age: 30 };
+var nameTwo;
+nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };
