@@ -1,4 +1,6 @@
 //? BASICS
+// -------------------------------------------------
+
 const names = ["Michael", "July"];
 
 console.log(names);
@@ -21,9 +23,9 @@ console.log((calc(2)))
 // -------------------------------------------------
 
 // arrays
-let names = ['Carl', 'Troy', 'Steve'];
+let moreNames = ['Carl', 'Troy', 'Steve'];
 
-names.push('Sharma');
+moreNames.push('Sharma');
 
 let numbers = [10, 20, 12, 15];
 
@@ -53,6 +55,7 @@ person = {
 
 
 //? EXPLICIT TYPES
+// -------------------------------------------------
 
 let character: string = 'Stef';
 let age: number;
@@ -70,11 +73,11 @@ newNames.push('Brenda');
 console.log(newNames);
 
 // union types
-let mixed: (string|number|boolean)[] = [];
-mixed.push('greetings');
-mixed.push(false);
-mixed.push(80);
-console.log(mixed);
+let newMixed: (string|number|boolean)[] = [];
+newMixed.push('greetings');
+newMixed.push(false);
+newMixed.push(80);
+console.log(newMixed);
 
 let uid: string|number;
 
@@ -88,3 +91,6 @@ let nameTwo: {
   beltColour: string
 };
 nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };
+
+
+console.log("testing tsc");

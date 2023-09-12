@@ -1,8 +1,10 @@
+"use strict";
 //? BASICS
-var names = ["Michael", "July"];
+// -------------------------------------------------
+const names = ["Michael", "July"];
 console.log(names);
-var inputs = document.querySelectorAll("input");
-inputs.forEach(function (input) {
+const inputs = document.querySelectorAll("input");
+inputs.forEach(input => {
     console.log(input);
 });
 function calc(circ) {
@@ -12,16 +14,16 @@ console.log((calc(2)));
 //? ARRAYS AND OBJECTS
 // -------------------------------------------------
 // arrays
-var names = ['Carl', 'Troy', 'Steve'];
-names.push('Sharma');
-var numbers = [10, 20, 12, 15];
+let moreNames = ['Carl', 'Troy', 'Steve'];
+moreNames.push('Sharma');
+let numbers = [10, 20, 12, 15];
 numbers.push(25);
-var mixed = ['Pierce', 4, 'Abed', 8, 9];
+let mixed = ['Pierce', 4, 'Abed', 8, 9];
 mixed.push('Marge');
 mixed.push(10);
 mixed[0] = 3;
 // objects
-var person = {
+let person = {
     name: 'Troy',
     location: 'UK',
     age: 30
@@ -34,25 +36,27 @@ person = {
     age: 40,
 };
 //? EXPLICIT TYPES
-var character = 'Stef';
-var age;
-var isLoggedIn;
+// -------------------------------------------------
+let character = 'Stef';
+let age;
+let isLoggedIn;
 age = 30;
 isLoggedIn = true;
 // arrays
-var newNames = [];
+let newNames = [];
 newNames.push('Mike');
 newNames.push('Brenda');
 console.log(newNames);
 // union types
-var mixed = [];
-mixed.push('greetings');
-mixed.push(false);
-mixed.push(80);
-console.log(mixed);
-var uid;
+let newMixed = [];
+newMixed.push('greetings');
+newMixed.push(false);
+newMixed.push(80);
+console.log(newMixed);
+let uid;
 // objects
-var nameOne;
+let nameOne;
 nameOne = { name: 'Crow', age: 30 };
-var nameTwo;
+let nameTwo;
 nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };
+console.log("testing tsc");
