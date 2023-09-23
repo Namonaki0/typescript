@@ -37,7 +37,7 @@ mixed.push('Marge');
 mixed.push(10);
 mixed[0] = 3;
 
-// objects
+//? OBJECTS
 let person = {
   name: 'Troy',
   location: 'UK',
@@ -65,14 +65,14 @@ age = 30;
 
 isLoggedIn = true;
 
-// arrays
+//? ARRAYS
 let newNames: string[] = [];
 
 newNames.push('Mike');
 newNames.push('Brenda');
 console.log(newNames);
 
-// union types
+//? UNION TYPES
 let newMixed: (string|number|boolean)[] = [];
 newMixed.push('greetings');
 newMixed.push(false);
@@ -81,16 +81,54 @@ console.log(newMixed);
 
 let uid: string|number;
 
-// objects
+//? OBJECTS
 let nameOne: object;
 nameOne = { name: 'Crow', age: 30 };
 
 let nameTwo: {
   name: string,
   age: number,
-  beltColour: string
+  newLocation: string
 };
 nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };
 
-
 console.log("testing tsc");
+
+//? FUNCTIONS
+let greet: Function;
+
+greet = () => {
+  console.log("say hello");
+}
+
+const add = (a: number, b: number, c: string | number = 10): void => {
+  console.log(a + b);
+  console.log(c)
+}
+
+add(10, 30, '10');
+
+const minus = (a: number, b: number): number => {
+  return a - b;
+}
+
+let result = minus(5, 2);
+
+//? TYPE ALIASES
+type StringOrNum = string | number;
+type objWithName = { name: string, uid: StringOrNum };
+
+const logDetails = (uid: StringOrNum, item: string ) => {
+  console.log(`${item} has an id of ${uid}`);
+ }
+
+ const isPresent = (user: objWithName) => {
+  console.log(`${user.name} is present`);
+ }
+
+ const isAlsoPresent = (user: objWithName) => {
+  console.log(`${user.name} is also present`);
+ }
+
+
+
