@@ -130,5 +130,30 @@ const logDetails = (uid: StringOrNum, item: string ) => {
   console.log(`${user.name} is also present`);
  }
 
+ //? FUNCTION TYPES
+//  example 1
+let greeting: (a: string, b: string) => void;
 
+greeting = (name: string, greet: string) => {
+  console.log(`${name} says ${greet}`);
+}
 
+// example 2
+let calcNums: (a: number, b: number, c: string) => number;
+
+calcNums = (numOne: number, numTwo: number, type: string) => {
+  if (type === 'add') {
+    return numOne + numTwo;
+  } else {
+    return numOne - numTwo;
+  }
+}
+ 
+// example 3
+let details: (obj: {name: string, age: number}) => void;
+
+type user = {name: string, age: number};
+
+details = (userObj: user) => {
+  console.log(`${userObj.name} is ${userObj.age} years old.`)
+}
