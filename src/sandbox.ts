@@ -150,10 +150,10 @@ calcNums = (numOne: number, numTwo: number, type: string) => {
 }
  
 // example 3
-let details: (obj: {name: string, age: number}) => void;
+let detailsObj: (obj: {name: string, age: number}) => void;
 
 type user = {name: string, age: number};
 
-details = (userObj: user) => {
+detailsObj = (userObj: user) => {
   console.log(`${userObj.name} is ${userObj.age} years old.`)
 }
