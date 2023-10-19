@@ -1,4 +1,4 @@
-// TYPE CASTING
+//? TYPE CASTING
 const anchor = document.querySelector('a')!;
 
 // if (anchor) {
@@ -20,9 +20,38 @@ form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
   console.log(
-    type.value, 
-    tofrom.value, 
-    details.value, 
+    type.value,
+    tofrom.value,
+    details.value,
     amount.valueAsNumber
   );
 });
+
+
+//? CLASSES & ACCESS MODIFIERS
+class Invoice {
+  // client: string;
+  // details: string;
+  // amount: number;
+
+  constructor(
+    readonly client: string, 
+    private details: string, 
+    public amount: number
+    ){}
+
+  format() {
+    return `${this.client} is owed £${this.amount} for ${this.details}`;
+  }
+}
+
+const invOne = new Invoice("James", "building new framework", 700);
+const invTwo = new Invoice("Mark", "doing all the chores", 50);
+
+const invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invoices.forEach(invoice => {
+  console.log(invoice.client, invoice.amount, invoice.format())
+})

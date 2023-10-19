@@ -22,7 +22,7 @@ let mixed = ['Pierce', 4, 'Abed', 8, 9];
 mixed.push('Marge');
 mixed.push(10);
 mixed[0] = 3;
-// objects
+//? OBJECTS
 let person = {
     name: 'Troy',
     location: 'UK',
@@ -42,21 +42,65 @@ let age;
 let isLoggedIn;
 age = 30;
 isLoggedIn = true;
-// arrays
+//? ARRAYS
 let newNames = [];
 newNames.push('Mike');
 newNames.push('Brenda');
 console.log(newNames);
-// union types
+//? UNION TYPES
 let newMixed = [];
 newMixed.push('greetings');
 newMixed.push(false);
 newMixed.push(80);
 console.log(newMixed);
 let uid;
-// objects
+//? OBJECTS
 let nameOne;
 nameOne = { name: 'Crow', age: 30 };
 let nameTwo;
 nameTwo = { name: 'Shin', age: 24, newLocation: 'Canada' };
 console.log("testing tsc");
+//? FUNCTIONS
+let greet;
+greet = () => {
+    console.log("say hello");
+};
+const add = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c);
+};
+add(10, 30, '10');
+const minus = (a, b) => {
+    return a - b;
+};
+let result = minus(5, 2);
+const logDetails = (uid, item) => {
+    console.log(`${item} has an id of ${uid}`);
+};
+const isPresent = (user) => {
+    console.log(`${user.name} is present`);
+};
+const isAlsoPresent = (user) => {
+    console.log(`${user.name} is also present`);
+};
+//? FUNCTION TYPES
+//  example 1
+let greeting;
+greeting = (name, greet) => {
+    console.log(`${name} says ${greet}`);
+};
+// example 2
+let calcNums;
+calcNums = (numOne, numTwo, type) => {
+    if (type === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+// example 3
+let detailsObj;
+detailsObj = (userObj) => {
+    console.log(`${userObj.name} is ${userObj.age} years old.`);
+};
