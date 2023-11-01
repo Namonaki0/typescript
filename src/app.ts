@@ -1,5 +1,7 @@
+import {Invoice} from "./classes/Invoice.js";
+
 //? TYPE CASTING
-const anchor = document.querySelector('a')!;
+// const anchor = document.querySelector('a')!;
 
 // if (anchor) {
 //   console.log(anchor.href);
@@ -27,23 +29,6 @@ form.addEventListener('submit', (e: Event) => {
   );
 });
 
-
-//? CLASSES & ACCESS MODIFIERS
-class Invoice {
-  // client: string;
-  // details: string;
-  // amount: number;
-
-  constructor(
-    readonly client: string, 
-    private details: string, 
-    public amount: number
-    ){}
-
-  format() {
-    return `${this.client} is owed £${this.amount} for ${this.details}`;
-  }
-}
 
 const invOne = new Invoice("James", "building new framework", 700);
 const invTwo = new Invoice("Mark", "doing all the chores", 50);
